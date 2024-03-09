@@ -24,13 +24,13 @@ export default class Pricing {
     this._currency = currency;
   }
 
-  //   a method that returns the attributes
+  // a method that returns the attributes
   displayFullPrice() {
     return `${this._amount} ${this._currency.displayFullCurrency()}`;
   }
 
-  //   a static method
-  static converPrice(amount, conversionRate) {
+  // a static method
+  static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
 }
