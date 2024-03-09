@@ -26,7 +26,7 @@ export default class Car {
   }
 
   cloneCar() {
-    const newObj = this[Symbol.species]();
-    return new newObj(this._brand, this._motor, this._color);
+    const Obj = this[Symbol.species]();
+    return new Obj(this._brand, this._motor, this._color);
   }
 }
