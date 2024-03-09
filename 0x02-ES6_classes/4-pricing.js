@@ -21,7 +21,7 @@ export default class Pricing {
   }
 
   set currency(currency) {
-    this._currency = currency;
+    if (currency instanceof Currency) this._currency = currency;
   }
 
   // a method that returns the attributes
