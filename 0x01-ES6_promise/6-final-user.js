@@ -13,5 +13,5 @@ export default async function handleProfileSignup(
     status: result.status,
     value: result.status === 'fulfilled' ? result.value : result.reason,
   })));
-  return arr;
+  return Promise.resolve(arr);
 }
