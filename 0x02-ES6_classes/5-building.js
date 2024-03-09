@@ -3,11 +3,11 @@ export default class Building {
     this.sqft = sqft;
 
     if (
-      new.target !== Building &&
-      typeof this.evacuationWarningMessage !== 'function'
+      new.target !== Building
+      && typeof this.evacuationWarningMessage !== 'function'
     ) {
       throw Error(
-        'Class extending Building must override evacuationWarningMessage'
+        'Class extending Building must override evacuationWarningMessage',
       );
     }
   }
