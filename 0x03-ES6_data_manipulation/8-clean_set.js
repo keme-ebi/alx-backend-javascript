@@ -1,8 +1,8 @@
-export default function cleanSet(set, startstring) {
+export default function cleanSet(set, startString) {
   let string = [];
   for (const str of set) {
-    if (str.startsWith(startstring) && startstring !== '') {
-      string.push(str.slice(3));
+    if (str.startsWith(startString) && startString !== '') {
+      string.push(str.slice(startString.length));
     }
   }
   return string.join('-');
