@@ -1,9 +1,8 @@
 export default function getStudentIdsSum(students) {
-  const ids = students.map((obj) => obj.id);
-  const totalIds = ids.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
+  const idSum = students.reduce(
+    (accumulator, students) => accumulator + students.id,
     0
   );
 
-  return totalIds;
+  return idSum;
 }
