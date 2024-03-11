@@ -10,5 +10,5 @@ export default function cleanSet(set, startString) {
     }
   }
 
-  return string.join('-');
+  return `${string.join('-')}`;
 }
