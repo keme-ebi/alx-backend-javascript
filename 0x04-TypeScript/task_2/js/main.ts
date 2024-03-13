@@ -1,3 +1,4 @@
+// task 5
 // DirectorInterface
 interface DirectorInterface {
     workFromHome(): string;
@@ -53,3 +54,42 @@ function createEmployee(salary: string | number): Director | Teacher {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+// end of task 5
+
+// task 6
+// type predicate for if the employee is a director
+function isDirector(employee: Director | Teacher): employee is Director {
+    return employee instanceof Director;
+}
+
+// function to execute work
+function executeWork(employee: Director | Teacher): string {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
+    }
+}
+
+// tests
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
+// end of task 6
+
+// task 7
+// a string literal type allowing a variable to have Math or History as value
+type Subjects = 'Math' | 'History';
+
+// a teachClass function that returns string depending on todayClass
+function teachClass(todayClass: Subjects): string{
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else {
+        return 'Teaching History';
+    }
+}
+
+// test
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
+// end of task 7

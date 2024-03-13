@@ -30,13 +30,44 @@ var Teacher = /** @class */ (function () {
 }());
 function createEmployee(salary) {
     if (typeof salary === "number" && salary < 500) {
-        return new Teacher;
+        return new Teacher();
     }
     else {
-        return new Director;
+        return new Director();
     }
 }
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+// end of task 5
+// task 6
+// type predicate for if the employee is a director
+function isDirector(employee) {
+    return employee instanceof Director;
+}
+// function to execute work
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    }
+    else {
+        return employee.workTeacherTasks();
+    }
+}
+// tests
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
+// a teachClass function that returns string depending on todayClass
+function teachClass(todayClass) {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    }
+    else {
+        return 'Teaching History';
+    }
+}
+// test
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
+// end of task 7
 //# sourceMappingURL=main.js.map
