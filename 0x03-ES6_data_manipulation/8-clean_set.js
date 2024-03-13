@@ -9,6 +9,7 @@ export default function cleanSet(set, startString) {
       string.push(str.substring(startString.length));
     }
   }
+  const res = string.join('-');
 
-  return string.join('-');
+  return res;
 }
