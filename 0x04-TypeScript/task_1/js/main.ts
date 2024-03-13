@@ -49,3 +49,39 @@ interface printTeacher {
 console.log(printTeacher("John", "Doe"));
 
 // end of task 3
+
+// task 4
+// a StudentClass class
+// interface for the constructor
+interface StudentConstructor {
+    firstName: string;
+    lastName: string;
+}
+
+// interface for the class method
+interface StudentMethods {
+    workOnHomework(): string;
+    displayName(): string;
+}
+class StudentClass {
+    firstName: string;
+    lastName: string;
+    constructor({firstName, lastName}: StudentConstructor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return 'Currently working';
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
+
+// example
+const student = new StudentClass({firstName: 'John', lastName: 'Doe'});
+console.log(student.workOnHomework());
+console.log(student.displayName());
+// end of task 4
