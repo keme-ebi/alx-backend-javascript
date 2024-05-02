@@ -1,7 +1,7 @@
 {
-  "name": "unittest",
+  "name": "0x06-unittests_in_js",
   "version": "1.0.0",
-  "description": "unittest in js",
+  "description": "unittests in js",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^5.1.0",
     "mocha": "^10.4.0"
   }
 }
