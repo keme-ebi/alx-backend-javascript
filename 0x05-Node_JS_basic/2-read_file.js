@@ -11,21 +11,21 @@ function countStudents(path) {
       const [firstname, , , field] = student.split(',');
       if (!fields[field]) {
         fields[field] = {
-	  count: 0,
-	  firstNames: []
-      };
-    }
-    fields[field].count += 1;
-    fields[field].firstNames.push(firstname);
+          count: 0,
+          names: [],
+        };
+      }
+      fields[field].count += 1;
+      fields[field].names.push(firstname);
     });
 
     console.log(`Number of students: ${students.length}`);
 
-    for (const [field, student] of Object.entries(fields)) {
-      console.log(`Number of students in ${field}: ${student.count}. List: ${student.firstNames.join(', ')}`);
-     }
+    for (const [field, value] of Object.entries(fields)) {
+      console.log(`Number of students in ${field}: ${value.count}. List: ${value.names.join(', ')}`);
+    }
   } catch (err) {
-      throw new Error('Cannot load the database');
+    throw new Error('Cannot load the database');
   }
 }
 
