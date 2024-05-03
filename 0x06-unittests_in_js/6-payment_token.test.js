@@ -3,7 +3,7 @@ const chai = require('chai');
 const expect = chai.expect;
 
 describe('getPaymentTokenFromAPI', () => {
-  it('test the result of getPaymentTokenFromAPI(true)', () => {
+  it('test the result of getPaymentTokenFromAPI(true)', done => {
     getPaymentTokenFromAPI(true)
       .then((result) => {
         expect(result).to.have.property('data', 'Successful response from the API');
