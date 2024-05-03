@@ -34,6 +34,7 @@ describe('cart page', () => {
   it('correct result when :id is a number', done => {
     request(`${url}/cart/10`, (err, res, body) => {
       expect(body).to.be.equal('Payment methods for cart 10');
-    }
+      done();
+    });
   });
 });
