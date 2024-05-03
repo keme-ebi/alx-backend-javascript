@@ -20,5 +20,7 @@ describe('calculateNumber', function () {
     assert.strictEqual(calculateNumber(0, 0), 0);
     assert.strictEqual(calculateNumber(2.4, 0), 2);
     assert.strictEqual(calculateNumber(-3.4, 0), -3);
+    assert.strictEqual(calculateNumber(0, 2), 2);
+    assert.strictEqual(calculateNumber(0, 3.6), 4);
   });
 });
