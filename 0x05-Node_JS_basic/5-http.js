@@ -23,7 +23,7 @@ async function countStudents(path) {
       if (!fieldMap[field]) {
         fieldMap[field] = {
           count: 0,
-          names: []
+          names: [],
         };
       }
 
@@ -42,8 +42,8 @@ async function countStudents(path) {
     return result;
     // Resolve the promise with the result
   } catch (error) {
-      // Reject the promise in case of error
-      throw new Error('Cannot load the database');
+    // Reject the promise in case of error
+    throw new Error('Cannot load the database');
   }
 }
 
@@ -59,7 +59,7 @@ const app = http.createServer(async (req, res) => {
       const students = await countStudents(database);
       res.end(students);
     } catch (err) {
-        res.end('Cannot load the database');
+      res.end('Cannot load the database');
     }
   } else {
     res.statusCode = 404;
