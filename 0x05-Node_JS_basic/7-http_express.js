@@ -49,7 +49,7 @@ async function countStudents(path) {
 
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
-}); 
+});
 
 app.get('/students', async (req, res) => {
   const text = 'This is the list of our students\n';
